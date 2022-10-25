@@ -10,40 +10,49 @@
 </head>
 <body class="background-image" style="background-image: url(./assets/img/fond.webp);">
     <div class="box">
+        <h1>Jeu du Pendu</h1>
         <div>
-            <img src="./assets/img/pendu 1.jpg" width="400px">
+            <img src="./assets/img/pendu 1.jpg" width="150px">
         </div>
         <div class="secret-word">
-            _ _ _ _ _ _ _ _ _ _
+            <p id="par">Paragraphe mot secret</p>
         </div>
-        <div class="Lettres">
-            <button>A</button>
-            <button>B</button>
-            <button>C</button>
-            <button>D</button>
-            <button>E</button>
-            <button>F</button>
-            <button>G</button>
-            <button>H</button>
-            <button>I</button>
-            <button>J</button>
-            <button>K</button>
-            <button>L</button>
-            <button>M</button>
-            <button>N</button>
-            <button>O</button>
-            <button>P</button>
-            <button>Q</button>
-            <button>R</button>
-            <button>S</button>
-            <button>T</button>
-            <button>U</button>
-            <button>V</button>
-            <button>W</button>
-            <button>X</button>
-            <button>Y</button>
-            <button>Z</button>
-        </div>
+        <span class="pendu_text">Entrez une lettre grâce au clavier ci-dessous ; si elle est dans le mot secret, elle sera affichée mais sinon...</span>
+        <span class="pendu_text">Vous risquez d'y perdre la tête !</span>
+        <table class="tableau-alphabet">
+            <tr>
+                <td><button id="a">A</button></td>
+                <td><button id="b">B</button></td>
+                <td><button id="c">C</button></td>
+                <td><button id="d">D</button></td>
+                <td><button id="e">E</button></td>
+                <td><button id="f">F</button></td>
+                <td><button id="g">G</button></td>
+                <td><button id="h">H</button></td>
+                <td><button id="i">I</button></td>
+                <td><button id="j">J</button></td>
+            </tr>
+            <tr>
+                <td><button id="k">K</button></td>
+                <td><button id="l">L</button></td>
+                <td><button id="m">M</button></td>
+                <td><button id="n">N</button></td>
+                <td><button id="o">O</button></td>
+                <td><button id="p">P</button></td>
+                <td><button id="q">Q</button></td>
+                <td><button id="r">R</button></td>
+                <td><button id="s">S</button></td>
+                <td><button id="t">T</button></td>
+            <tr>
+                <td><button id="u">U</button></td>
+                <td><button id="u">U</button></td>
+                <td><button id="v">V</button></td>
+                <td><button id="w">W</button></td>
+                <td><button id="x">X</button></td>
+                <td><button id="y">Y</button></td>
+                <td><button id="z">Z</button></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

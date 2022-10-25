@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "horror";
+    src: url(../fonts/Devils\ Crew.ttf);
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -6,46 +11,69 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    button{
-        width: 10%;
-        height: 40%;
-        
-        // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    }
+    
 
     .box{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 80vw;
-        height: 80vh;
-        background-color: rgba(212, 212, 212, 0.5);
-        padding: 2vh;
+        height: 90vh;
+        background-color: rgba(62, 124, 151, 0.163);
+        padding: 0.5vh;
+        border: dashed aliceblue 2px;
+        padding-bottom: 5vh;
         
-        .secret-word{
-            font-size:80px;
+        h1{
+            font-family: "horror";
+            font-size: 4rem;
+            color:aliceblue;
         }
 
-        .Lettres{
+        #par{
+            color: aliceblue;
+        }
+
+        .pendu_text{
+            font-family: "horror";
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:aliceblue;
+        }
+        .tableau-alphabet{
             display: flex;
             justify-content: space-around;
-            width: 100%;
-            height:20%;
+
+            tr{
+                width: 100%;
+
+                td{
+                    width: 100%;
+                }
+            }
 
             button{
-                width: 10%;
+                width: 30%;
                 height: 30%;
                 box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
                 border-color:darkslategray;
                 border-radius: 10px;
-                background-color:lavender;
+                background-color:lightskyblue;
+                margin-right: 0.1vh;
 
             }
             button:hover{
                 cursor: pointer;
-                color: aliceblue;
+                box-shadow: rgba(0, 0, 0, .3) 0 5px 15px, inset 0.1em 0.1em 0.2em 0.05em rgba(0, 0, 0, 0.2);
+                transform : scale(0.98);
+                transition: 250ms;
             }
+
+            button:active {
+                box-shadow: rgba(0, 0, 0, .3) 0 5px 15px, rgba(0, 0, 0, 0.2) 0 3px 7px inset;
+                transform: translateY(2px);
+            } 
         }
     }
 }
