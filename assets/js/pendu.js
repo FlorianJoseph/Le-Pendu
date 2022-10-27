@@ -1,50 +1,41 @@
-const box = document.querySelector('.box');
-const afficheMotSecret = document.querySelector('#par');
+const box = document.querySelector(".box");
+const afficheMotSecret = document.querySelector("#par");
+const p = document.querySelector(".essais");
+let afficheLettres = document.querySelector(".lettres");
+let alphabet = "abcdefghijklmnopqrstuvwxyz"
+let afficheAlphabet = alphabet.toUpperCase()
 let dico = ["bonjour","salut","coucou","hello"];
-let rand = Math.round(Math.random()*dico.length)
-let motSecret = []
+let motSecret = dico[Math.floor(Math.random()*dico.length)]
 let motSecretEtoiles = []
 let essais = 0
-let longueurMotSecret = 0
-let recupIndexMotSecret = 0
-let sortie=false
-
-// parcours le dictionnaire pour choisir un mot aléatoire et l'ajoute dans le tableau motSecret
-for (let i = 0; i< dico.length;i++){
-    if (i === rand){
-        motSecret.push(dico[i]);
-    }
-}
 
 // parcoure le tableau motSecret et crée un tableau affiché avec des "*" pour chaque lettre
-for (let lettres of motSecret){
-    for (let number of lettres){
-        longueurMotSecret++
-        motSecretEtoiles.push("*");
-        afficheMotSecret.textContent = motSecretEtoiles;
-    }
+for (let i = 0; i< motSecret.length;i++){
+    motSecretEtoiles.push("*");
 }
 
-// evenement sur le bouton u qui vérifie si la lettre est présente dans le motSecret et l'affiche
-// const u = document.querySelector('#u');
-// u.addEventListener("click",()=>{
-    // for (let i=0; i < longueurMotSecret && sortie === false; i++){
-    //     for (let mot of motSecret){
-    //         for (let lettre of mot){
-    //             if (lettre =="u"){
-    //                 console.log(mot[i]);
-    //                 sortie = true;
-    //             }
-    //         }
-    //     }
-    // }
-// });
+// affiche le mot secret avec des étoiles
+afficheMotSecret.textContent = motSecretEtoiles.join("");
+p.textContent = `Il vous reste ${essais} essais`;
 
-console.log(motSecret.indexOf('u'))
+// crée les buttons de l'alphabet
+for (let i = 0; i<afficheAlphabet.length;i++){
+    const button = document.createElement("button");
+    button.className = "lettres";
+    afficheLettres.appendChild(button);
+    button.textContent+=afficheAlphabet.charAt(i);
+    button.value+=alphabet.charAt(i);
 
-// for (let i=0; i <= motSecret.length; i++){
-//     for (let j=0; j<longueurMotSecret;i++){
-//         console.log(longueurMotSecret);
-//         console.log(motSecret[i][j]);
-//         }
-//     }
+    button.addEventListener("click",()=>{
+        for (let i=0; i<alphabet;i++){
+            console.log(motSecretEtoiles[i]);
+            if(button.value===alphabet.charAt(i)){
+                motSecretEtoiles[i]=button.value;
+            }
+            console.log(alphabet.charAt(i));
+            console.log(button.value);
+        }
+        button.disabled="disabled";
+        button.style="background-color:grey;"
+    })
+}
