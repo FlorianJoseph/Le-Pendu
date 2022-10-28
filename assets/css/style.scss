@@ -24,26 +24,40 @@ body {
         padding: 0.5vh;
         border: dashed aliceblue 2px;
         padding-bottom: 5vh;
+        background-color:rgb(67, 115, 117);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         
         h1{
             font-family: "horror";
             font-size: 4rem;
             color:aliceblue;
+            background-color:darkslategray;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border: solid 2px black;
+            padding: 1vh;
         }
 
-        #par{
+        .mot-essais{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             color: aliceblue;
-        }
-
-        .essais{
-            color: aliceblue;
+            background-color:darkslategray;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border: solid 1px black;
+            padding: 0.5vh;
         }
 
         .pendu_text{
+            text-align: center;
             font-family: "horror";
             font-size: 1.5rem;
             font-weight: bold;
             color:aliceblue;
+            background-color:darkslategray;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border: solid 2px black;
+            padding: 0.5vh;
         }
 
         .lettres{
@@ -72,7 +86,9 @@ body {
         button:active {
             box-shadow: rgba(0, 0, 0, .3) 0 5px 15px, rgba(0, 0, 0, 0.2) 0 3px 7px inset;
             transform: translateY(2px);
-        } 
+        }
     }
 }
+
+
 
