@@ -30,7 +30,6 @@ for (let i = 0; i < afficheAlphabet.length; i++) {
   afficheLettres.appendChild(button);
   button.textContent += afficheAlphabet.charAt(i);
   button.value += alphabet.charAt(i);
-
   // récupère la valeur de la lettre du boutton pour vérifier si il est dans le motSecret
   button.addEventListener("click", () => {
     if (tabCompteur.length < 7) {
@@ -43,25 +42,23 @@ for (let i = 0; i < afficheAlphabet.length; i++) {
           )}`;
         } else {
           if (
-            tabCompteur.find((lettre) => lettre === button.value) === undefined
+            tabCompteur.find((lettre) => lettre === button.value) ===
+              undefined && // la lettre est fausse et n'as pas deja été joué
+            motSecret.indexOf(button.value) === -1 // si la lettre n'est pas "bonne"
           ) {
             tabCompteur.push(button.value);
             button.style = "visibility: hidden;";
-            const createImage = document.createElement("img");
-            createImage.id = `pendu${7 - tabCompteur.length}`;
-            createImage.src = `./assets/img/${7 - tabCompteur.length}.jpg`;
-            createImage.style = "width:250px;";
-            imgPendu.appendChild(createImage);
+            imgPendu.childNodes[1].src = `./assets/img/${
+              7 - tabCompteur.length
+            }.jpg`;
           }
-          document
-            .getElementById(`pendu${7 - (tabCompteur.length - 1)}`)
-            .remove();
           p.textContent = `Il vous reste ${7 - tabCompteur.length} essais`;
           if (tabCompteur.length === 7) {
-            p.textContent = `Il vous reste ${
-              7 - tabCompteur.length
-            } essais et vous avez perdu !`;
+            p.textContent = "Vous avez perdu !";
           }
+          // else if(){
+          //   p.textContent = "Vous avez gagné !";
+          // }
         }
       }
     }
