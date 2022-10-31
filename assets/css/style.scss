@@ -11,8 +11,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    
-
     .box{
         display: flex;
         flex-direction: column;
@@ -35,20 +33,36 @@ body {
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             border: solid 2px black;
             padding: 1vh;
+            width: 80%;
+            text-align: center;
+            border-radius: 4px;
         }
 
         .mot-essais{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             color: aliceblue;
             background-color:darkslategray;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             border: solid 1px black;
-            padding: 0.5vh;
+            padding-left: 2vh;
+            padding-right: 2vh;
+            margin: 2vh;
+            border-radius: 4px;
+
+            .essais{
+                margin-left: 4vh;
+                border: solid 1px black;
+                padding: 0.5vh;
+                background-color: aliceblue;
+                background-color:rgb(67, 115, 117);
+                border-radius: 4px;
+            }
         }
 
         .pendu_text{
+            border-radius: 4px;
             text-align: center;
             font-family: "horror";
             font-size: 1.5rem;
@@ -58,6 +72,8 @@ body {
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             border: solid 2px black;
             padding: 0.5vh;
+            margin-right: 2vh;
+            margin-left: 2vh;
         }
 
         .lettres{
